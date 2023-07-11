@@ -12,16 +12,23 @@ const ItemsList = styled.div `
 
 const ListedItem = styled.div`
   width: 100%;
-  height: 40px;
-  padding: 0 20px;
+  padding: 7px 20px;
   box-sizing: border-box;
   display: flex;
   background-color: #1e1c1c;
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+  @media (max-width: 440px) {
+    font-size: 12px;
+    padding: 7px 5px;
+  }
   `;
 
 const ListTitles = styled(ListedItem)`
   position: sticky;
   top: 0;
+  z-index: 3;
 `
 
 const ItemImage = styled.img`
@@ -29,6 +36,10 @@ const ItemImage = styled.img`
   height: 20px;
   margin: 0 5px;
   object-fit: contain;
+  @media (max-width: 440px) {
+    width: 15px;
+    height: 15px;
+  }
 `;
 
 const ItemName = styled.div`
@@ -36,6 +47,11 @@ const ItemName = styled.div`
   display: flex;
   align-items: center;
   color: white;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 10px;
+    justify-content: center;
+  }
 `;
 
 const ItemNameTitle = styled(ItemName)`
@@ -53,6 +69,10 @@ const ItemPrice = styled.div`
   display: flex;
   align-items: center;
   color: white;
+  @media (max-width: 768px) {
+    width: 60%;
+    justify-content: center;
+  }
 `;
 
 const ItemPriceTitle = styled(ItemPrice)`
@@ -71,6 +91,10 @@ const ItemTrend = styled.div`
   align-items: center;
   flex-grow: 1;
   color: ${props => props.color};
+  @media (max-width: 768px) {
+    width: 40%;
+    justify-content: center;
+  }
 `;
 
 const ItemTrendTitle = styled(ItemTrend)`

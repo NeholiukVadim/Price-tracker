@@ -73,6 +73,7 @@ export const itemsListSlice = createSlice({
         [fetchItems.fulfilled]: (state, action) => {
             state.isLoading = false;
             state.itemsList = action.payload.data.sort((a, b) => {return b.mean - a.mean});
+            console.log(state.itemsList)
             state.priceFilterState = "unset";
             state.trendFilterState = "unset";
             state.itemsNamesFilterState = "unset";
