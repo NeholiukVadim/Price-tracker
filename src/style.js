@@ -20,6 +20,9 @@ const ContentContainer = styled.div `
   grid-template-columns: minmax(130px, 12vw) minmax(0, 90vw);
   grid-template-rows: 50px 85%;
   row-gap: 20px;
+  @media (max-width: 440px) {
+    grid-template-columns: minmax(100px, 12vw) minmax(0, 90vw);
+  }
 `;
 
 const LeagueSelection = styled.select `
@@ -46,6 +49,9 @@ const CategoriesList = styled.div `
 
   ::-webkit-scrollbar {
     display: none;
+  }
+  @media (max-width: 440px) {
+    font-size: 12px;
   }
 `;
 
